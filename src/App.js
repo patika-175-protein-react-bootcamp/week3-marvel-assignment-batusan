@@ -77,7 +77,7 @@ function App() {
         <div className="wrapper">
           <div id="hero-box" className="m-auto">
             {characters.map((character, i) => (
-              <div class="hero-card">
+              <div key={`${character.name}${i}`} className="hero-card">
                 <img
                   className="hero-img"
                   src={`${character.thumbnail.path}/portrait_incredible.${character.thumbnail.extension}`}
@@ -90,16 +90,20 @@ function App() {
           <div className="pagination m-auto">
             {currentPage <= 4 && (
               <>
+                {/* For loop with creating empty array */}
                 {[...Array(5)].map((x, i) =>
                   currentPage === i + 1 ? (
                     <span
+                      key={`${x}${i}`}
                       className="pag-center"
                       onClick={() => handleClick(i + 1)}
                     >
                       {i + 1}
                     </span>
                   ) : (
-                    <span onClick={() => handleClick(i + 1)}>{i + 1}</span>
+                    <span key={`${x}${i}`} onClick={() => handleClick(i + 1)}>
+                      {i + 1}
+                    </span>
                   )
                 )}
                 <span>...</span>

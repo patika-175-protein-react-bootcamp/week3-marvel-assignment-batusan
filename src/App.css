@@ -70,6 +70,7 @@
   justify-items: end;
   width: 75%;
   margin-top: 50px;
+  bottom: 25px;
   position: relative;
   font-size: 1em;
 }
