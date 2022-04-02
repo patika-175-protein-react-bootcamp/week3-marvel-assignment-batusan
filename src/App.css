@@ -44,6 +44,8 @@
   left: 50%;
   padding-bottom: 60px;
   transform: translate(-50%, -5%);
+  padding-top: 1rem;
+  border-top: 1px solid #fff;
 }
 
 .hero-font {
@@ -54,11 +56,13 @@
   height: 3rem;
 }
 
+
+
+/** PAGINATION **/
+
 .wrapper {
   position: relative;
 }
-
-/** PAGINATION **/
 
 .pagination {
   display: flex;
